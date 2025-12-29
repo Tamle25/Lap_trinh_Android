@@ -32,12 +32,9 @@ class StudentAdapter(
 
         init {
             itemView.setOnClickListener {
-                // Lấy vị trí của item được click
                 val position = adapterPosition
-                // Kiểm tra xem vị trí có hợp lệ không
                 if (position != RecyclerView.NO_POSITION) {
                     val student = students[position]
-                    // Gọi đến phương thức trong MainActivity để hiển thị EditFragment
                     listener.showEditStudentFragment(position, student)
                 }
             }
